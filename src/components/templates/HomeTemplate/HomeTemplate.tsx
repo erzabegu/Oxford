@@ -8,7 +8,7 @@ import {
   Testimonials,
 } from '@oxford/organisms';
 
-const HomeTemplate = ({ loading }: HomeTemplateTypes) => {
+const HomeTemplate = ({ loading, getImage }: HomeTemplateTypes) => {
   return (
     <div>
       <header className={'sticky top-0 bg-white z-10 w-full custom-shadow'}>
@@ -16,7 +16,7 @@ const HomeTemplate = ({ loading }: HomeTemplateTypes) => {
       </header>
       <div className={'w-full bg-gray-50'}>
         <LeadingContent />
-        <BetterWayToCloseDeals loading={loading} />
+        <BetterWayToCloseDeals loading={loading} getImage={getImage}/>
       </div>
       <Testimonials />
       <AllInOnePlatform />
